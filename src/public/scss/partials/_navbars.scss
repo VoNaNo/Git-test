@@ -4,7 +4,7 @@
     height: auto;
     ul {
         display: flex;
-        justify-content: center;
+        justify-content: right;
         li {
             align-items: center;
             list-style: none;
@@ -24,7 +24,7 @@
     top: 0;
     left: 0;
     position: sticky;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     ul {
         display: flex;
         justify-content: space-evenly;
@@ -32,6 +32,8 @@
             padding: 10px ;
             list-style: none;
             margin-left: 10px;
+            border-bottom: 1px solid yellow;
+
             a {
                 color: white;
             }
