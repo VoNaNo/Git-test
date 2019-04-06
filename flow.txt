@@ -1,0 +1,26 @@
+VoNBlog – Git
+
+¿Que es Git?
+
+R: Git (pronunciado "guit"2 ) es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente. Al principio, Git se pensó como un motor de bajo nivel sobre el cual otros pudieran escribir la interfaz de usuario o front end como Cogito o StGIT. 3 Sin embargo, Git se ha convertido desde entonces en un sistema de control de versiones con funcionalidad plena. 4 Hay algunos proyectos de mucha relevancia que ya usan Git, en particular, el grupo de programación del núcleo Linux.
+
+- ¿No te ha pasado que estas trabajando en un proyecto en el cual llevas varias versiones del mismo? Y de repente necesitas algún componente que solo esta en versiones anteriores.
+
+- Sistema de control de versiones (CVS), software que ha ayudado en el flujo de trabajo de los desarrolladores a tal magnitud que hoy en día, cualquier aspirante a una empresa de desarrollo web, debe tener vastos conocimientos en git.
+
+- Ahora es necesario, por no decir que es una obligación, aprender sobre git.
+
+- La revolución que ha marcado es bastante grande, desde aquellas épocas en las que categorizábamos las versiones de nuestros proyectos en varias carpetas, que terminaba por acumularse, siendo un desorden y un caos a la hora de tener que buscar algún componente en versiones anteriores.
+
+- La historia de Git
+- Quien creo Git
+- Deberías aprender?
+- Antes y después de git
+
+- Puedes entenderlo de la siguiente forma; una maquina del tiempo que te permite volver a versiones antiguas de código y regresar al código presente, a través de commits
+
+- Si vas aprender git, deberías saber quien lo hizo posible, linus el contribuidor n.º 1 del kernel de linux
+
+- Esta web usa git
+
+aprende un poco que no te hará mal ;) ira 

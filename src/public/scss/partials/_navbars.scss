@@ -1,0 +1,34 @@
+.navigation {
+    background: red;
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+
+// Navbar-sticky
+
+
+
+.nav-sticky {
+    // background: #8b5555;
+    background-color: #333333;
+    top: 0;
+    left: 0;
+    position: sticky;
+    margin-bottom: 100px;
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        li {
+            padding: 10px ;
+            list-style: none;
+            margin-left: 10px;
+            a {
+                color: white;
+            }
+        }
+    }
+}
