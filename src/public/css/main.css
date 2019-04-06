@@ -65,14 +65,23 @@ footer {
   color: white;
 }
 
-.title-wrap {
-  color: red;
+.btn {
+  background-color: rgba(36, 41, 39, 0.644);
+  color: white;
+  margin: 10px 0;
+  padding: 5px 15px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
 .btn:hover {
   background-color: #d4d102;
   color: #333;
   transform: scale(1.2);
+}
+
+.title-wrap {
+  color: red;
 }
 
 .cover {
@@ -86,60 +95,46 @@ footer {
 
 .content {
   background-color: rgba(21, 27, 25, 0.712);
+  padding: 10px;
   color: white;
   text-align: center;
 }
 
-.btn-nav {
-  animation: float 1.5s ease-out infinite;
-  color: white;
-  font-size: 50px !important;
-}
-
-.btn {
-  background-color: rgba(36, 41, 39, 0.644);
-  color: white;
-  margin: 10px 0;
-  padding: 5px 15px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.info {
+.secInfo {
   background-color: #151914;
   color: white;
   padding: 0 20px;
 }
-.info h2 {
-  font-size: 100px;
-  margin: 0;
-  text-align: center;
+.secInfo .infoContent {
+  background-color: red;
+  padding: 10px 0;
 }
-.info .infoContent {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-}
-.info .infoContent .block {
-  background-color: rgba(148, 23, 23, 0.63);
-  width: 20%;
-  padding: 10px;
+.secInfo .infoContent .infoBlocks {
+  background-color: rgba(0, 255, 255, 0.431);
+  width: 100%;
+  height: 50vh;
   margin: 10px 0;
 }
-.info .infoContent .block .iconSocial {
+.secInfo .infoContent .infoBlocks .block {
+  background-color: rgba(148, 23, 23, 0.63);
+  width: 30%;
+  height: 50vh;
+  top: 0;
+  left: 0;
+}
+.secInfo .infoContent .infoBlocks .block i {
   font-size: 70px;
 }
-.info .infoContent .block h3 {
+.secInfo .infoContent .infoBlocks .block h3 {
   font-size: 20px;
   margin: 5px 0 10px 0;
   text-transform: uppercase;
 }
-.info .infoContent .block p {
+.secInfo .infoContent .infoBlocks .block p {
   font-size: 13px;
 }
-.info i {
-  color: white;
+.secInfo .infoContent .infoBlocks .block-right {
+  float: right;
 }
 
 .details {
