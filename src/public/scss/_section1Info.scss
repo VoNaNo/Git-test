@@ -1,0 +1,41 @@
+.info {
+    background-color: #151914;
+    color: white;
+    padding: 0 20px;
+ 
+    h2 {
+        font-size: 100px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .infoContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+
+        .block {
+            background-color: rgba(148, 23, 23, 0.63);
+            width: 20%;
+            padding: 10px;
+            margin: 10px 0;
+
+            .iconSocial {
+                font-size: 70px;
+            }
+            h3 {
+                font-size: 20px;
+                margin: 5px 0 10px 0;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+}
+    i {
+        color: white;
+    }
+    
+}
