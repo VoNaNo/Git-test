@@ -46,10 +46,6 @@
         </ul>
     </nav>
 
-<!-- TITLE-TXT -->
-<div class="title-wrap">
-    <h2>Que es Git?</h2>
-</div>
 
     <div class="infoContent">
         <article class="block">
@@ -97,22 +93,222 @@
         </ul>
     </nav>
 
-    <div>
-        <div class="detailsContent">
-            <div class="block-title">
-                <h2>La guia sencilla de git</h2>
-                <span>inspirada por la web <a href="#">enlace</a></span>
-<br>
-<br>
-                <p>
-                    por Roger Dudler (traducido por @lfbarragan y @adrimatellanes) 
-                    créditos a @tfnico, @fhd y Namics
-                </p>
-            </div>
-            <div class="block-conversed">
+    <div class="detailsContent">
 
+        <div class="block-title">
+            <h2>La guia sencilla de git</h2>
+            <span>inspirada por la web <a href="#">enlace</a></span>
+    <br><br>
+            <p>por Roger Dudler (traducido por @lfbarragan y @adrimatellanes) créditos a @tfnico, @fhd y Namics</p>
+        </div>
+
+        <div class="block-conversed">
+            <article>
+                <h3>crea un repositorio nuevo</h3>
+                <p>Crea un directorio nuevo, ábrelo y ejecuta</p> 
+    <br>
+                <code>git init</code>
+    <br>
+    <br>
+                <p>para crear un nuevo repositorio de git.</p>
+            </article>
+                    
+            <article>
+                <h3>hacer checkout a un repositorio</h3>
+                <p>Crea una copia local del repositorio ejecutando</p>
+    <br>
+                <code>git clone /path/to/repository</code>
+    <br>
+    <br>
+                <p>Si utilizas un servidor remoto, ejecuta</p>
+    <br>
+                <code>git clone username@host:/path/to/repository</code>
+    <br>
+    <br>
+            </article>
+
+<!-- ARTICLE -->
+
+            <article>
+                <h3>flujo de trabajo</h3>
+                <p>
+                    Tu repositorio local esta compuesto por tres "árboles" administrados por git. El primero es tu <code>Directorio de trabajo</code>  que contiene los archivos, el segundo es el <code>Index</code> que actua como una zona intermedia, y el último es el <code>HEAD</code> que apunta al último commit realizado.
+                </p>
+            </article>
+
+<!-- ARTICLE -->
+
+            <article>
+                <h3>add & commit</h3>
+                <p>Puedes registrar cambios (añadirlos al Index) usando</p>
+    <br><br>
+                <code>git add <"filename"></code>
+                or
+                <code>git add .</code>
+    <br><br>
+                <p>Este es el primer paso en el flujo de trabajo básico. Para hacer commit a estos cambios usa</p>
+    <br><br>  
+                <code>git commit -m "Commit message"</code>
+    <br><br>
+                <p>Ahora el archivo esta incluído en el HEAD, pero aún no en tu repositorio remoto.</p>
+            </article>
+
+<!-- ARTICLE -->
+
+            <article>
+                <h3>envío de cambios</h3>
+                <p>Tus cambios están ahora en el HEAD de tu copia local. Para enviar estos cambios a tu repositorio remoto ejecuta </p>
+    <br><br>
+                <code>git push origin master</code>
+    <br><br>
+                <p>Reemplaza master por la rama a la que quieres enviar tus cambios.</p> 
+    <br><br>
+                <p>Si no has clonado un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, usa</p>
+    <br><br>
+                <code>git remote add origin <"server"></code>
+    <br><br>
+                <p>Ahora podrás subir tus cambios al repositorio remoto seleccionado.</p>
+            </article>
+
+<!-- ARTICLE -->
+
+            <article>
+                <h3>Rama</h3>
+                <p>
+                    Las ramas son utilizadas para desarrollar funcionalidades aisladas unas de otras. La rama master es la rama "por defecto" cuando creas un repositorio. Crea nuevas ramas durante el desarrollo y fusiónalas a la rama principal cuando termines.
+                </p>
+    <br><br>
+                <p>Crea una nueva rama llamada "feature_x" y cámbiate a ella usando:</p>
+    <br><br>
+                <code>git checkout -b feature_x</code>
+    <br><br>
+                <p>vuelve a la rama principal</p>
+    <br><br>
+                <code>git checkout master</code>
+    <br><br>
+                <p>y borra la rama</p>
+    <br><br>
+                <code>git branch -d feature_x</code>
+    <br><br>
+                <p>Una rama nueva no estará disponible para los demás a menos que subas (push) la rama a tu repositorio remoto</p>
+    <br><br>
+                <code>git push origin <"branch"></code>
+    <br><br>
+            </article>
+
+<!-- ARTICLE -->
+
+            <article>
+                <h3>actualiza & fusiona</h3>
+
+                <p>Para actualizar tu repositorio local al commit más nuevo, ejecuta</p>
+    <br><br>
+                
+                <code>git pull</code>
+    <br><br>
+                <p>
+                    en tu directorio de trabajo para bajar y fusionar los cambios remotos.
+    <br>
+                    Para fusionar otra rama a tu rama activa (por ejemplo master), utiliza
+                </p>
+    <br><br>
+                <code>git merge <"branch"></code>
+    <br><br>
+                <p>
+                    en ambos casos git intentará fusionar automáticamente los cambios. Desafortunadamente, no siempre será posible y se podrán producir conflictos. Tú eres responsable de fusionar esos conflictos manualmente al editar los archivos mostrados por git. Después de modificarlos, necesitas marcarlos como fusionados con
+                </p>
+    <br><br>
+                <code>git add <"filename"></code>
+    <br><br>
+                <p>Antes de fusionar los cambios, puedes revisarlos usando</p>
+    <br><br>
+                <code>git diff <"source_branch"> <"target_branch"></code>
+    <br><br>
+            </article>
+                    
+<!-- ARTICLE -->
+
+            <article>
+                <h3>etiquetas</h3>
+
+                <p>Se recomienda crear etiquetas para cada nueva versión publicada de un software. Este concepto no es nuevo, ya que estaba disponible en SVN. Puedes crear una nueva etiqueta llamada 1.0.0 ejecutando</p>
+    <br><br>
+                <code>git tag 1.0.0 1b2e1d63ff</code>
+    <br><br>
+                <p>1b2e1d63ff se refiere a los 10 caracteres del commit id al cual quieres referirte con tu etiqueta. Puedes obtener el commit id con: </p>
+    <br><br>
+                <code>git log</code>
+    <br><br>
+                <p>también puedes usar menos caracteres que el commit id, pero debe ser un valor único.</p>
+            </article>
+
+<!-- ARTICLE -->
+
+            <article>
+                <h3>reemplaza cambios locales</h3>
+                <p>En caso de que hagas algo mal (lo que seguramente nunca suceda ;) puedes reemplazar cambios locales usando el comando</p>
+    <br><br>
+                <code>git checkout -- <"filename"></code>
+    <br><br>
+                <p>Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD. Los cambios que ya han sido agregados al Index, así como también los nuevos archivos, se mantendrán sin cambio.</p>
+    <br>
+                <p>Por otro lado, si quieres deshacer todos los cambios locales y commits, puedes traer la última versión del servidor y apuntar a tu copia local principal de esta forma</p>
+    <br><br>
+                <code>git fetch origin</code>   or
+                <code>git reset --hard origin/master</code>
+    <br><br>
+            </article>
+
+<!-- ARTICLE -->
+
+            <article>
+                <h3>datos útiles</h3>
+                <p>Interfaz gráfica por defecto</p>
+    <br><br>
+                <code>gitk</code>
+    <br><br>
+                <p>Colores especiales para la consola</p>
+    <br><br>
+                <code>git config color.ui true</code>
+    <br><br>    
+                <p>Mostrar sólo una línea por cada commit en la traza</p>
+    <br><br>
+                <code>git config format.pretty oneline</code>
+    <br><br>
+                <p>Agregar archivos de forma interactiva</p>
+    <br><br>
+                <code>git add -i</code>
+    <br><br>
+            </article>
+        </div>
+
+        <div class="block-links">
+            <h3>Enlace y recursos</h3>
+    <br><br>
+            <div>
+                <h4>Clientes y Recursos</h4b>
+
+                <ul>
+                    <li><a href="#">GitX (L) (OSX, open source)</a></li>
+                    <li><a href="#">Tower (OSX)</a></li>
+                    <li><a href="#">Source Tree (OSX, free)</a></li>
+                    <li><a href="#">GitHub for Mac (OSX, free)</a></li>
+                    <li><a href="#">GitBox (OSX)</a></li>
+                </ul>
             </div>
-            <div class="block-links"></div>
+    <br>
+            <div>
+                <h4>Guias</h4>
+
+                <ul>
+                    <li><a href="#">Git Community Book</a></li>
+                    <li><a href="#">Pro Git</a></li>
+                    <li><a href="#">Think like a git</a></li>
+                    <li><a href="#">GitHub Help</a></li>
+                    <li><a href="#">A Visual Git Guide</a></li>
+                </ul>
+            </div>
+    <br><br>
         </div>
     </div>
 </section>
